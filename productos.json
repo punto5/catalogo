@@ -31,7 +31,7 @@
         "nombre": "Empanadas Arabes",
         "precio": 1200,
         "descripcion": "tapas, relleno de arabes",
-        "imagenes": ["img/empanadarabes.jpg","img/empanadarabes-2.jpg"]
+        "imagenes": ["img/empanadaraes.jpg","img/empanadarabes-2.jpg"]
       }
     ]
   }, 
@@ -43,8 +43,9 @@
         "nombre": "Empanadas JAMON Y QUESO",
         "precio": 1200,
         "descripcion": "tapas, relleno de arabes",
-        "imagenes": ["img/empanadarabes.jpg","img/empanadarabes-2.jpg"]
+        "imagenes": ["img/empanadarbes.jpg","img/empanadarabes-2.jpg"]
       }
     ]
   }
+
 ]
