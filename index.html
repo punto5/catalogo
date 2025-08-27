@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punto 5 - Menú</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<h1>Punto 5 - Menú</h1>
+
+<div id="categorias"></div>
+
+<!-- Sticky Cart -->
+<div id="stickyCart">
+  <h2>Carrito</h2>
+  <div id="carrito"></div>
+  <div id="metodoPagoDiv">
+    <label for="metodoPago">Método de pago:</label>
+    <select id="metodoPago">
+      <option value="Efectivo">Efectivo</option>
+      <option value="Transferencia">Transferencia</option>
+    </select>
+  </div>
+  <button id="enviarWhatsApp"><i class="fa-brands fa-whatsapp"></i> Confirmar pedido</button>
+</div>
+
+<!-- Modal de detalles -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-images"></div>
+    <h2 id="modal-nombre"></h2>
+    <p id="modal-descripcion"></p>
+    <input type="number" id="modal-cantidad" value="1" min="1">
+    <textarea id="modal-observaciones" placeholder="Observaciones-preferencias(ej:sin lechuga)"></textarea>
+    <button id="modal-agregar">Agregar al carrito</button>
+  </div>
+</div>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/543546565940" id="whatsappFloat" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

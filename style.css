@@ -1,0 +1,346 @@
+/* ---- Fuentes y Reset ---- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* ---- Títulos ---- */
+h1 {
+  color: #d35400;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #34495e;
+  margin: 20px 0 10px 0;
+  font-size: 1.8rem;
+}
+
+/* ---- Grid de Productos ---- */
+#categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* ---- Card de producto ---- */
+.producto {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+  min-height: 280px;
+}
+
+.producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.producto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.25s;
+}
+
+.producto img:hover {
+  transform: scale(1.05);
+}
+
+.producto div {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ---- Sticky Cart ---- */
+#stickyCart {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  z-index: 100;
+  transition: transform 0.25s;
+}
+
+#stickyCart #carrito div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#stickyCart button {
+  background-color: #d35400;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+#stickyCart button:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+/* ---- Selector de método de pago ---- */
+#metodoPagoDiv {
+  margin-bottom: 12px;
+}
+
+#metodoPagoDiv label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+#metodoPago {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border-color 0.25s;
+}
+
+#metodoPago:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+/* ---- Modal ---- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow:auto;
+  background: rgba(0,0,0,0.65);
+  padding: 20px;
+}
+
+.modal-content {
+  background: #fff;
+  margin: 40px auto;
+  padding: 22px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(-10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.25s;
+}
+
+.close:hover {
+  color: #d35400;
+}
+
+/* ---- Modal Images ---- */
+#modal-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow-x: hidden;
+}
+
+#modal-images img {
+  width: 100%;
+  height: auto;           /* Mantiene proporción */
+  object-fit: contain;    /* No deforma ni recorta */
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: transform 0.25s;
+}
+
+/* ---- Modal Textos e Inputs ---- */
+#modal-nombre {
+  color: #d35400;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#modal-descripcion {
+  color: #555;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+#modal-cantidad, #modal-observaciones {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+#modal-observaciones {
+  resize: none;
+  height: 70px;
+}
+
+#modal-agregar {
+  width: 100%;
+  margin-top: 8px;
+  background-color: #d35400;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+#modal-agregar:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+/* ---- WhatsApp flotante ---- */
+#whatsappFloat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background 0.25s, transform 0.25s;
+}
+
+#whatsappFloat:hover {
+  background: #20b958;
+  transform: translateY(-3px);
+}
+
+/* ---- Responsive ---- */
+@media(max-width:900px){
+  #categorias {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+  .producto img {
+    height: 140px;
+  }
+  #stickyCart {
+    width: 240px;
+    top: 70px;
+  }
+}
+
+@media(max-width:700px){
+  #stickyCart {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    right: 50%;
+    transform: translateX(50%);
+    width: 95%;
+    border-radius: 12px 12px 0 0;
+    padding: 15px;
+  }
+  #categorias {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+  .producto {
+    min-height: auto;
+  }
+  #modal-content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 18px;
+  }
+  #modal-images img {
+    height: auto;          /* Mantiene proporción en móviles */
+  }
+  #modal-cantidad, #modal-observaciones, #metodoPago {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  #modal-agregar, #stickyCart button {
+    font-size: 1.05rem;
+    padding: 12px;
+  }
+  #whatsappFloat {
+    width: 70px;
+    height: 70px;
+    font-size: 2.3rem;
+  }
+}
+
+/* ---- Animaciones y detalles extra ---- */
+.producto, #stickyCart, #modal-agregar, #whatsappFloat {
+  transition: all 0.25s ease-in-out;
+}
+
+#stickyCart div button {
+  font-size: 0.85rem;
+  padding: 4px 6px;
+  border-radius: 6px;
+}

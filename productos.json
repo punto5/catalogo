@@ -1,0 +1,50 @@
+[
+  {
+    "categoria": "Lomitos",
+    "imagen": "img/cat-lomitos.jpg",
+    "productos": [
+      {
+        "nombre": "Lomito Completo",
+        "precio": 1200,
+        "descripcion": "Lomito con lechuga, tomate, huevo, jamón y queso",
+        "imagenes": ["img/lomito-completo-1.jpg","img/lomito-completo-2.jpg"]
+      }
+    ]
+  },
+  {
+    "categoria": "Pizzas",
+    "imagen": "img/cat-pizzas.jpg",
+    "productos": [
+      {
+        "nombre": "Pizza Muzzarella",
+        "precio": 2500,
+        "descripcion": "Muzzarella con salsa de tomate casera y orégano",
+        "imagenes": ["img/pizza-muzzarella.jpg","img/pizza-muzzarella-2.jpg"]
+      }
+    ]
+  },
+  {
+    "categoria": "Empanadas",
+    "imagen": "img/cat-empanadas.jpg",
+    "productos": [
+      {
+        "nombre": "Empanadas Arabes",
+        "precio": 1200,
+        "descripcion": "tapas, relleno de arabes",
+        "imagenes": ["img/empanadarabes.jpg","img/empanadarabes-2.jpg"]
+      }
+    ]
+  }, 
+  {
+    "categoria": "Empanadas",
+    "imagen": "img/cat-empanadas.jpg",
+    "productos": [
+      {
+        "nombre": "Empanadas JAMON Y QUESO",
+        "precio": 1200,
+        "descripcion": "tapas, relleno de arabes",
+        "imagenes": ["img/empanadarabes.jpg","img/empanadarabes-2.jpg"]
+      }
+    ]
+  }
+]
